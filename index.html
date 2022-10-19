@@ -6,7 +6,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>오늘의 날씨</title>
     <script src="https://code.jquery.com/jquery-1.12.4.js"></script>
-    <script type="text/javascript" src="http://dapi.kakao.com/v2/maps/sdk.js?appkey=87288e5c895d0f27387fea6af937b9e8"></script>
+    <script type="text/javascript" src="https://dapi.kakao.com/v2/maps/sdk.js?appkey=87288e5c895d0f27387fea6af937b9e8"></script>
     <style>
         *{margin:0; padding:0}
         body{
@@ -179,10 +179,10 @@
 
         function forecast(foreData){
             
-            $(".forecast li:eq(0) .f_icon").html(`<img src='http://openweathermap.org/img/wn/${foreData.list[0].weather[0].icon}.png'>`);
-            $(".forecast li:eq(1) .f_icon").html(`<img src='http://openweathermap.org/img/wn/${foreData.list[8].weather[0].icon}.png'>`);
-            $(".forecast li:eq(2) .f_icon").html(`<img src='http://openweathermap.org/img/wn/${foreData.list[16].weather[0].icon}.png'>`);
-            $(".forecast li:eq(3) .f_icon").html(`<img src='http://openweathermap.org/img/wn/${foreData.list[24].weather[0].icon}.png'>`);
+            $(".forecast li:eq(0) .f_icon").html(`<img src='https://openweathermap.org/img/wn/${foreData.list[0].weather[0].icon}.png'>`);
+            $(".forecast li:eq(1) .f_icon").html(`<img src='https://openweathermap.org/img/wn/${foreData.list[8].weather[0].icon}.png'>`);
+            $(".forecast li:eq(2) .f_icon").html(`<img src='https://openweathermap.org/img/wn/${foreData.list[16].weather[0].icon}.png'>`);
+            $(".forecast li:eq(3) .f_icon").html(`<img src='https://openweathermap.org/img/wn/${foreData.list[24].weather[0].icon}.png'>`);
 
             var foreTime1 = new Date(foreData.list[0].dt*1000);
             var foreTime2 = new Date(foreData.list[8].dt*1000);
@@ -203,7 +203,7 @@
             var todayWeater = data.name + " " + 
                               data.weather[0].main + 
                               " 온도 : " + data.main.temp + "℃" + 
-                              `<img src='http://openweathermap.org/img/wn/${data.weather[0].icon}@2x.png'>`;
+                              `<img src='https://openweathermap.org/img/wn/${data.weather[0].icon}@2x.png'>`;
 
             var todaytime = new Date(data.dt*1000);
             
@@ -213,7 +213,7 @@
             // $(".weather").html(todayWeater);
             // $(".time").html(print_time);
             $(".name").html(data.name); //도시이름
-            $(".icon").html(`<img src='http://openweathermap.org/img/wn/${data.weather[0].icon}@2x.png'>`);
+            $(".icon").html(`<img src='https://openweathermap.org/img/wn/${data.weather[0].icon}@2x.png'>`);
             $(".main").html(data.weather[0].main); //clear
             $(".temp").html(data.main.temp + " ℃");
         }
